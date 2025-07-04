@@ -8,6 +8,8 @@ on:
 
 jobs:
   repo-sync:
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # 使用内置令牌
     runs-on: ubuntu-latest
     permissions:  # 👇 添加权限声明
       contents: write
